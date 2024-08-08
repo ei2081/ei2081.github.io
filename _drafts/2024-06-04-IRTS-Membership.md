@@ -1,7 +1,7 @@
 ---
 title: IRTS Membership 
 description: All set with 1 day turnaround !
-# date: 2024-06-04 21:08:09 +0000
+date: 2024-06-04 21:08:09 +0000
 categories: [] # top, sub. <= 2
 tags: [irts]     # TAG names should always be lowercase. 0+
 # author: <author id from _data/authors.yml> or [id1, id2, etc]
