@@ -1,3 +1,14 @@
+This is content for [my github pages site](https://ei2081.github.io/)
+
+The is site is built using [Github Pages](https://pages.github.com/) for code managment, hosting, and the build/deploy pipeline (actions). 
+
+From the code, it is generated as a static website via the [Jekyll static site generator](https://jekyllrb.com).
+
+It builds directly upon the [the Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy?tab=readme-ov-file#chirpy-jekyll-theme) for Jekyll, using their [recommended starter option](https://chirpy.cotes.page/posts/getting-started/#option-1-using-the-starter-recommended)
+
+
+----
+
 # Chirpy Starter
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
