@@ -6,6 +6,10 @@ From the code, it is generated as a static website via the [Jekyll static site g
 
 It builds directly upon the [the Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy?tab=readme-ov-file#chirpy-jekyll-theme) for Jekyll, using their [recommended starter option](https://chirpy.cotes.page/posts/getting-started/#option-1-using-the-starter-recommended)
 
+# Licence
+> Except where otherwise noted, anything added to this repo is under the 
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/ licensed
+
 
 ----
 

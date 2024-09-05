@@ -16,7 +16,8 @@ timezone: UTC
 
 title: EI2081 # the main title
 
-tagline: Wireless Telegraphy - it's a way of life # it will display as the subtitle
+tagline: adventures in SWL, Amateur Radio & Software
+# tagline: Wireless Telegraphy - it's a way of life # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   musings of a Short Wave Listener / aspirational Amateur Station
