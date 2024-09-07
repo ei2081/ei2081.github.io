@@ -25,4 +25,6 @@ The whole install, setup and deploy was done in minutes using [their getting sta
 > All of the github pages related integration including Jekyll build (generating static output) and pages-deploy was handled behind the scenes just by following those instructions.
 {: .prompt-info }
 
-What takes a bit longer - but is worth it - is figuring out how the theme works, and the nuances of it's file layout, configuration and behaviour. It is possible  to speed up that try, test and learn processing by installing a local build/deploy stack 
+What takes a bit longer is figuring out how the theme works, how Jekyll works, customising your posts and configuration & behaviour. 
+
+It is possible to speed up that try, test and learn processing by installing a local build/deploy stack [which i wrote about here]({% post_url 2024-08-26-local-jekyll-for-webpage-testing %})
