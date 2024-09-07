@@ -16,6 +16,9 @@ update [the gemfile](./Gemfile)
 run `bundle update jekyll-theme-chirpy`
 
 # Posts
+Link to a post:
+`[Name of Link]({% post_url 2010-07-21-name-of-post %})`
+
 Jekyll Docs
 - posts https://jekyllrb.com/docs/posts/
 
