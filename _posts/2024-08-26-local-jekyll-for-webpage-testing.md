@@ -10,25 +10,25 @@ image:
     alt: picture of jekyll local
 ---
 
-This is my first use of [the Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy?tab=readme-ov-file#chirpy-jekyll-theme) for the [Jekyll static site generator](https://jekyllrb.com), and my first use of Jekyll itself. These technologies mean only updates to config and markdown text are required by me.
+This is my first use of [the Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy?tab=readme-ov-file#chirpy-jekyll-theme) for the [Jekyll static site generator](https://jekyllrb.com) and my first use of Jekyll itself. These technologies mean only updates to config and markdown text are required by me.
 
 I initially followed the [starter guide](https://chirpy.cotes.page/posts/getting-started/#option-1-using-the-starter-recommended) for having my "github pages" respository generated from their chirpy template. The theme arose in a few online articles and videos, like [in this video from "Techno Tim" ](https://www.youtube.com/watch?v=F8iOU1ci19Q)
 
-At this point I'm new to github pages, jekyll & chirpy. The process for edits needs a local edit, push to github and a wait for the github-actions. It's all a bit slow and cumbersome this way.
+At this point I'm new to github pages, jekyll and chirpy. The process for edits needs a local edit, a push to github and a wait for the github-actions. It's all a bit slow and cumbersome this way.
 
-> So, I'm getting Jekyll on my laptop to "run" the blog/site locally first, and see how that improves things (it should!).
+> So, I'm getting Jekyll on my laptop to "run" the blog/site locally first to see how that improves things (it should!).
 {: .prompt-tip }
 
 ## Steps for Local Jekyll
 - Following the [getting started guide](https://chirpy.cotes.page/posts/getting-started/), I skipped the dev-container bits and went straight to [the Jekyll install guide](https://chirpy.cotes.page/posts/getting-started/#setting-up-natively-recommended-for-unix-like-os), and for my system the [focus was for mac os](https://jekyllrb.com/docs/installation/macos/) specifically. 
-- My Mac is the intel version, currently on Ventura/13.6. I already have the `brew` installer, so grabbing `chruby` and using `ruby-install` was a breeze , although it suprised me that it took 15 minutes or more
+- My Mac is the intel version, currently on Ventura/13.6. I already have the `brew` installer, so grabbing `chruby` and using `ruby-install` was a breeze, although it suprised me that it took 15 minutes or more
   - it seems to be going about not just an install but a build of everything it needs (ruby, docs, etc) and local install 
   - eventually it completes with `>>> Successfully installed ruby 3.1.3 into /Users/ei2081/.rubies/ruby-3.1.3`
   - after a bit of fun with the `.zshrc` updates (typos on my part) I've got `* ruby-3.1.3` when i run `chruby`.
 - at this point I'm delighted that I didn't *fork* the chirpy theme when I got it, as now I would have to go and deal with installing node!
 - startup works when I don't forget to run `bundle` first, to grab additional ruby gems
 
-All said an done, the most difficult part of this was reading through the [Writing a new post](https://chirpy.cotes.page/posts/write-a-new-post/) article from the Chirpy Theme folks and realising it's not really geared toward your new, _first_ post :D - I found the [Text and Typography](https://chirpy.cotes.page/posts/text-and-typography/) article a little better.
+All said and done, the most difficult part of this was reading through the [Writing a new post](https://chirpy.cotes.page/posts/write-a-new-post/) article from the Chirpy Theme folks and realising it's not really geared toward your new, _first_ post :D - I found the [Text and Typography](https://chirpy.cotes.page/posts/text-and-typography/) article a little better.
 
 ## The local Jekyll Experience
 After running `bundle exec jekyll s` from the checkout of my repository, a few features and suprises were immediately apparent
