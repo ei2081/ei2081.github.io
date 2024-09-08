@@ -54,7 +54,7 @@ I got the "configure i/o devices" windows as expected, after starting from termi
 - selected `RTLSDRBlog Blog V4 SN...`
 - selected output audio device to my headphones
 
-It spun up very quickly and going to the FM Audio bands i can see immediately an improvement. Where with SDR++ only local radio showed, now i see national, e.g. RNaG on 93.4MHz and the [EI2HHR 4m repeater on 70.4MHz](https://www.irts.ie/cgi/repeater.cgi) connected to the [SIRN network](http://sirnrepeaters.blogspot.com/) (see image).
+It spun up very quickly and going to the FM Audio bands i can see immediately an improvement. Where with SDR++ only local radio showed, now i see national, e.g. RNaG on 93.4MHz and the [EI2HHR 4m repeater on 70.4MHz](https://www.irts.ie/cgi/repeater.cgi) connected to the [SIRN network](https://sirnrepeaters.blogspot.com/) (see image).
 
 There was no sign of the CPU fan kicking in or general pc slow down (it was variable 25-75% cpu), but of course we can alter the settings like the FFT to make it do more work and change that.
 
@@ -99,7 +99,7 @@ Next up will be hopefully a Raspberry Pi with the RTL SDR Blog V4....
 
 ## Web Sdr References
 
-- [Kiwi Web SDRs](http://kiwisdr.com/public/)
+- Kiwi Web SDRs: http://kiwisdr.com/public/
 - [Rx/Tx Receiver List](https://rx-tx.info/table-sdr-points?title=&type=All&country=All&order=field_country_name&sort=asc&page=0)
-- [Web SDR.org](http://www.websdr.org/)
+- [Web SDR.org](https://www.websdr.org/)
 
