@@ -13,16 +13,15 @@ image:
 > Next is [an attempt with a newer Pi 3]({% post_url 2024-08-31-rtlsdr-pi-3bp %}).
 {: .prompt-danger }
 
-> Approach fyi & in case I refer back to steps here.
+> May in future refer back to steps here.
 {: .prompt-tip }
 
-Having [tested the RTL-SDR Blog V2 on my laptop]({% post_url 2024-08-27-rtl-sdr-blog-v4 %}) I next up is to see if it will run on my Raspberry PI, a [2012 Pi Model B Rev2]({% post_url 2024-08-28-raspberry-pi-2011-modelb %})
+Having [tested the RTL-SDR Blog V2 on my laptop]({% post_url 2024-08-27-rtl-sdr-blog-v4 %}) next up is to see if it will run on my Raspberry PI, a [2012 Pi Model B Rev2]({% post_url 2024-08-28-raspberry-pi-models %})
 
-On this ocassion I'll be trying the Model B Rev2. 
 
 ## RTL-SDR Driver install
 
-Per [the V4 Users Guide](https://www.rtl-sdr.com/V4/), the approach to getting a driver for the various systems varies. For Debian GNU/Linux, the driver is grabbed [from their github](https://github.com/rtlsdrblog/rtl-sdr-blog) and compiled.
+Per [the V4 Users Guide](https://www.rtl-sdr.com/V4/), the approach to getting a driver differs for various systems. For Debian GNU/Linux, the driver is grabbed [from their github](https://github.com/rtlsdrblog/rtl-sdr-blog) and compiled.
 
 
 ### NB - they have two methods
@@ -39,7 +38,7 @@ sudo apt purge ^librtlsdr
 ```
 but I didn't have any of those installed ([output](#appendix-a-output---removing-old-drivers)).
 
-1. They to remove previous user-built drivers if any:
+1. Then to remove previous user-built drivers if any:
 ```shell
 sudo rm -rvf /usr/lib/librtlsdr* /usr/include/rtl-sdr* /usr/local/lib/librtlsdr* /usr/local/include/rtl-sdr* /usr/local/include/rtl_* /usr/local/bin/rtl_*
 ```
@@ -56,8 +55,7 @@ sudo apt-get install libusb-1.0-0-dev git cmake pkg-config
 ([output](#appendix-c-output---installing-dependancies))
 
 
-1. Grabbing the code
-Grabbing their code is a simple `git` command, and it will create a folder called by the name of the repository (`rtl-sdr-blog`). Or you can use `git clone <repo> <target-directory-name>` I think.
+1. Grabbing the driver code is a simple `git` command, and it will create a folder called by the name of the repository (`rtl-sdr-blog`).
 ```shell
 git clone https://github.com/rtlsdrblog/rtl-sdr-blog
 ```
@@ -90,14 +88,14 @@ sudo make install
 [output](#appendix-g-output---make-install).
 
 1. Copy the driver rules for udev, becuase _"...udev allows for rules that specify what name is given to a device, regardless of which port it is plugged into.... This consistent naming of devices guarantees that scripts dependent on a specific device's existence will not be broken."_ [ref](https://wiki.debian.org/udev#:~:text=udev%20allows%20for%20rules%20that,%2Fdev%2Firiver%20is%20possible.)
-```console
-pi@rasppi:~/rtl-sdr-blog/build $ sudo cp ../rtl-sdr.rules /etc/udev/rules.d/ 
+```shell
+sudo cp ../rtl-sdr.rules /etc/udev/rules.d/ 
 ```
 
 
-1. Configure the dynamic linker as _"...ldconfig creates the necessary links and cache to the most recent shared libraries..."_ [ref](https://man7.org/linux/man-pages/man8/ldconfig.8.html)
-```console
-pi@rasppi:~/rtl-sdr-blog/build $ sudo ldconfig
+1. Configure the dynamic linker as _"...`ldconfig` creates the necessary links and cache to the most recent shared libraries..."_ [ref](https://man7.org/linux/man-pages/man8/ldconfig.8.html)
+```shell
+sudo ldconfig
 ```
 
 1. And blacklist some DVB-T TV Drivers so they aren't inadvertently used instead I guess.
@@ -141,13 +139,13 @@ tail /var/log/daemon.log
 tail /var/log/kern.log
 ```
 
-...everything seems fine update until 28minutes after the hour, and then nothing until 31minutes after, which is startup related messages :(
+...everything seems fine up until 28 minutes after the hour, and then nothing until 31minutes after, which is startup related messages :(
 
 Various[<sup>1</sup>](https://forums.raspberrypi.com/viewtopic.php?t=258722) threads[<sup>2</sup>](https://raspberrypi.stackexchange.com/questions/114110/raspberry-pi-random-reboots-raspi-3b) online[<sup>3</sup>](https://stackoverflow.com/questions/38209074/rasperry-pi-reboots-when-running-program) point to power issues as the most likely culprit.
 
 The second link there suggests how [`vcgencmd`](https://www.raspberrypi.com/documentation/computers/os.html#vcgencmd) may be used to check throttling, temperature and voltage.
 
-I wrote a little script that runs each of `vcgencmd` on a loop with a `sleep` for 1 second between each round, hoping it might offer some clues about the restarts:
+I wrote a little script that runs each `vcgencmd` check on a loop with a `sleep` for 1 second between each round, hoping it might offer some clues about the restarts:
 ```bash
 #!/bin/bash
 function checkem ()
@@ -208,11 +206,11 @@ Press ^C after a few minutes.
 Reading samples in async mode...
 lost at least 20 bytes
 ```
-After the report of "lost" bytest, nothing else arrived at the console.
+After the report of "lost" bytes, nothing else arrived at the console.
 
 Background for that tool is [at this link](https://discussions.flightaware.com/t/understanding-rtl-test-p-results/16660). 
 > That discussion mentions [`dump1090`](https://github.com/antirez/dump1090), a utility for handling `Mode S` (ADS-B) messages transmitted from aircraft on `1090 MHz` with heading, speed, altitude etc for colission avoidance. Fun for future!
-{: .prompt-info }
+{: .prompt-tip }
 
 > More trouble :( After a while, I tried to kill that `rtl_test` command, but again the device had reset. 
 {: .prompt-warning }
@@ -220,7 +218,7 @@ Background for that tool is [at this link](https://discussions.flightaware.com/t
 
 Checking the throttle, temp and volt outputs (had been running in the background) showed no obvious culprit...
 
-I'm now thinking of a donated Pi3 I have here too, time to switch devices perhaps. To be continued...
+I'm now thinking of the Pi3 I have here too, time to switch devices perhaps. To be continued...
 
 
 ## Appendices
