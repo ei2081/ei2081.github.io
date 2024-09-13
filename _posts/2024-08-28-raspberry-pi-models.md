@@ -18,7 +18,7 @@ We have two Pi micro computers (or "single board computers" ) right now which we
 
 ## Raspberry PI Model B Rev2 
 
-The first is an old 2011 _"Raspberry PI Rev 2 Model B"_. Over the years it has run a demo website with dynamic dns serving, a media player and some retro games. Various operating system have graced it's memory cards including Raspian, Debian, Arch and even RISCOS. 
+The first is an old 2011 _"Raspberry PI Rev 2 Model B"_. Over the years it has run a demo website with dynamic dns serving, a media player and some retro games. Various operating system have graced its memory cards including Raspian, Debian, Arch and even RISCOS. 
 
 It may not be up to spec to run the [RTL SDR V4]({% post_url 2024-08-27-rtl-sdr-blog-v4 %}) but we will have a go.
 
