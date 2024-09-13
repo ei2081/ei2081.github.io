@@ -13,7 +13,7 @@ image:
 I recently wrote about a failed attempt to [use the RTL-SDL on a Pi Model B]({% post_url 2024-08-29-rtlsdr-pib %}). I have been using the SDR without issue on the laptop with GQRX aslo, so we know the SDR works :D.
 
 I'm going to try again with a [Raspberry PI 3, B+, R1.3]({% post_url 2024-08-28-raspberry-pi-models %})
- and see if that fairs any better.
+ and see if that fares any better.
 
 
 ## Raspberry configuration customisations 
