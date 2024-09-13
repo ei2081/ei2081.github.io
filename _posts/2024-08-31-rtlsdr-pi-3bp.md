@@ -125,7 +125,7 @@ dmesg -w
 
 Now it's just a matter of attaching the RTL.
 
-Ok, its' still running, output from above see [Appendix F](#appendix-f-monitor-output-for-device-connect)
+Ok, it's still running, output from above see [Appendix F](#appendix-f-monitor-output-for-device-connect)
 
 There were a few `rtl_*` programs I found previously, so going to have a quick look at those again.
 
